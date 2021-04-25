@@ -10,7 +10,6 @@ import {
 } from "react-native";
 
 import colors from "../styles/colors";
-import fonts from "../styles/fonts";
 
 interface ButtonProps extends TouchableOpacityProps {
   title: any;
@@ -44,6 +43,5 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 26,
     textAlign: "center",
-    fontFamily: fonts.heading,
   },
 });

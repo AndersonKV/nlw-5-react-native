@@ -12,7 +12,6 @@ import {
   Keyboard,
 } from "react-native";
 import colors from "../styles/colors";
-import fonts from "../styles/fonts";
 import { useNavigation } from "@react-navigation/native";
 
 import { Button } from "../components/Button";
@@ -101,7 +100,6 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: "center",
     color: colors.heading,
-    fontFamily: fonts.heading,
   },
   emoji: {
     fontSize: 44,
@@ -128,7 +126,6 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 26,
     textAlign: "center",
-    fontFamily: fonts.heading,
   },
   footer: {
     marginTop: 40,

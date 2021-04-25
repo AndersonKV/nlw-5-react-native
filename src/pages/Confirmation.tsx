@@ -1,12 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import colors from "../styles/colors";
-import fonts from "../styles/fonts";
 
 import { Button } from "../components/Button";
 
 export function Confirmation() {
+  const navigation = useNavigation();
+
+  function handleStart() {
+    navigation.navigate("PlantSection");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -16,7 +23,11 @@ export function Confirmation() {
           Agora vamos começar a cuidar das suas plantinhas com muito cuidado
         </Text>
         <View style={styles.footer}>
-          <Button title={"Confirmar"} myPaddingHorizontal={30} />
+          <Button
+            title={"Confirmar"}
+            myPaddingHorizontal={30}
+            onPress={handleStart}
+          />
         </View>
       </View>
     </SafeAreaView>
@@ -38,14 +49,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 22,
-    fontFamily: fonts.heading,
     textAlign: "center",
     color: colors.heading,
     lineHeight: 38,
     marginTop: 15,
   },
   subtitle: {
-    fontFamily: fonts.text,
     textAlign: "center",
     fontSize: 17,
     paddingVertical: 10,
